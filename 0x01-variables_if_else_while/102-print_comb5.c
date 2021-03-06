@@ -22,14 +22,17 @@ int main(void)
 						putchar(' ');
 						putchar(l + '0');
 						putchar(m + '0');
-
-						putchar(',');
-						putchar(' ');
+						if(i != 9 || j != 8 )
+						{
+							putchar(',');
+							putchar(' ');
+						}
 					}
 				}
 			}
 		}
 	}
+	putchar('\n');
 	return (0);
 }
 
