@@ -1,36 +1,40 @@
 #include <stdio.h>
+
 /**
- * main - entry point
- * Return: always 0 (success)
+ * main - Entry Point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i, j, l, m;
+	int a, b, c, d;
 
-	for (i = 0; i <= 9; i++)
+	for (a = '0'; a <= '9'; a++)
 	{
-		for (j = 0; j <= 9; j++)
+		for (b = '0'; b <= '9'; b++)
 		{
-			for (l = 0; l <= 9; l++)
+			for (c = '0'; c <= '9'; c++)
 			{
-				for (m = 0; m <= 9; m++)
+				for (d = '0'; d <= '9'; d++)
 				{
-					if (i <= l && (j < m || j == 0))
+					if (c >= a && ((d > b && c == a) || c != a))
 					{
-						putchar(i + '0');
-						putchar(j + '0');
+						putchar(a);
+						putchar(b);
 						putchar(' ');
-						putchar(l + '0');
-						putchar(m + '0');
-
+						putchar(c);
+						putchar(d);
+					if (a != '9' || b != '8' || c != '9' || d != '9')
+					{
 						putchar(',');
 						putchar(' ');
+					}
 					}
 				}
 			}
 		}
 	}
 	putchar('\n');
+
 	return (0);
 }
-
