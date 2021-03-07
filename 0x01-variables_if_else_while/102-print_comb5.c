@@ -15,19 +15,15 @@ int main(void)
 			{
 				for (m = 0; m <= 9; m++)
 				{
-					if (i <= l && j < m)
+					if (i <= l && (j < m || j == 0))
 					{
 						putchar(i + '0');
 						putchar(j + '0');
 						putchar(' ');
 						putchar(l + '0');
 						putchar(m + '0');
-
-						if (i != 9 || j != 8)
-						{
-							putchar(',');
-							putchar(' ');
-						}
+						putchar(',');
+						putchar(' ');
 					}
 				}
 			}
