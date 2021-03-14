@@ -1,8 +1,13 @@
 #ifndef _VARIADIC_FUNCTIONS_H
 #define _VARIADIC_FUNCTIONS_H
-#define <stdarg.h>
-
-typedef struct valid_types
+#define < stdarg.h >
+/**
+ * struct validtypes - defines that representation of the type
+ * @valid: the character representing the data type
+ * @f: pointer to function
+ *
+ */
+typedef struct validtypes
 {
 	char *valid;
 	void (*f)();
