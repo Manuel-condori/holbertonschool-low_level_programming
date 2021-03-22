@@ -7,16 +7,17 @@ int main(void)
 {
 	int i;
 	long int x = 0, y = 1, z = 1;
+	long int suma = 0;
 
 	for (i = 1; i <= 32; i++)
 	{
 		z = x + y;
 		x = y;
 		y = z;
-		printf("%li", z);
-		if (i < 32)
+		if (z % 2 == 0)
 		{
-			printf(", ");
+			suma += z;
+			printf("%li", suma);
 		}
 	}
 	printf("\n");
