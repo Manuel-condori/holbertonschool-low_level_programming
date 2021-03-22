@@ -17,9 +17,8 @@ int main(void)
 		if (z % 2 == 0)
 		{
 			suma += z;
-			printf("%li", suma);
 		}
 	}
-	printf("\n");
+	printf("%li\n", suma);
 	return (0);
 }
