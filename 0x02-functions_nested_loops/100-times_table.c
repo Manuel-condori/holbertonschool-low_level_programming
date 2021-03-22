@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "holberton.h"
 /**
  * print_times_table - prints the n times table, starting with 0.
@@ -18,26 +17,38 @@ void print_times_table(int n)
 			b = 0;
 				while (b <= n)
 				{
-					if ((a * b) < 10 && (b != 0))
+					if (b == 0)
 					{
-						printf("  %i", (a * b));
+						_putchar(((a * b) % 10) + '0');
 					}
-					else if ((a * b) < 100)
+					else if ((a * b) <= 9)
 					{
-						printf(" %i", (a * b));
+						_putchar(',');
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(' ');
+						_putchar((a * b) + '0');
+					}
+					else if ((a * b) <= 99)
+					{
+						_putchar(',');
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(((a * b) / 10) + '0');
+						_putchar(((a * b) % 10) + '0');
 					}
 					else
 					{
-						printf("%i", (a * b));
+						_putchar(',');
+						_putchar(' ');
+						_putchar(((a * b) / 100) + '0');
+						_putchar((((a * b) / 10) % 10) + '0');
+						_putchar(((a * b) % 10) + '0');
 					}
-					if (b != n)
-					{
-						printf(", ");
-					}
-						b++;
+					b++;
 				}
 				a++;
-				printf("\n");
+				_putchar('\n');
 		}
-	}
+	}	
 }
