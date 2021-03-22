@@ -7,14 +7,14 @@ int main(void)
 {
 	int i;
 	long int x = 0, y = 1, z = 1;
-	
+
 	for (i = 1; i <= 50; i++)
 	{
 		z = x + y;
 		x = y;
 		y = z;
-		printf("%li",z);
-		if(i < 50)
+		printf("%li", z);
+		if (i < 50)
 		{
 			printf(", ");
 		}
@@ -22,5 +22,3 @@ int main(void)
 	printf("\n");
 	return (0);
 }
-		
-		
